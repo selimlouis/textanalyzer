@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import UserRegisterForm
+from analyze.models import Report
 
 
 def register(request):
@@ -21,4 +22,5 @@ def register(request):
 #handle requirements with built in decorator
 @login_required
 def profile(request):
-    return render(request, 'users/profile.html', {'title': 'Profile'})
+    reports = request.user.report_set.all()
+    return render(request, 'users/profile.html', {'title': 'Profile', 'reports': reports})

@@ -1,6 +1,17 @@
 {% extends 'analyze/base.html' %}
 {% block content %}
     <h2>{{ user.username }}</h2>
+
+    {% for report in reports %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <small class="text-muted">{{ report.date_posted|date:"d F, Y" }}</small>
+                </div>
+                <p class="article-content">{{report.content}}</p>
+            </div>
+        </article>
+    {% endfor %}
 {% endblock content %}
 
     
