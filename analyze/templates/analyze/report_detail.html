@@ -1,0 +1,14 @@
+{% extends 'analyze/base.html' %}
+
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <h2>{{object.headline}}</h2>
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ object.author }}</a>
+                <small class="text-muted">{{ object.date_posted|date:"d F, Y" }}</small>
+            </div>
+            <p class="article-content">{{object.content}}</p>
+        </div>
+    </article>
+{% endblock content %}
