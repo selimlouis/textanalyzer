@@ -1,0 +1,15 @@
+{% extends 'analyze/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST" action="">
+        {% csrf_token %}
+        <fieldset>
+            <legend="border-bottom mb-4">Blog Post</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+    
+{% endblock content %}

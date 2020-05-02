@@ -11,4 +11,10 @@
             <p class="article-content">{{object.content}}</p>
         </div>
     </article>
+
+    {% if object.author == user %}
+    <a href="{%url 'report-update' object.id%} " class="btn btn-outline-info mb-4">Edit</a>
+    <a href="{%url 'report-delete' object.id%} " class="btn btn-outline-danger mb-4">Delete</a>
+    {% endif %}
+    
 {% endblock content %}

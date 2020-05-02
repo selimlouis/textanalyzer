@@ -44,6 +44,7 @@ class ReportCreateView(LoginRequiredMixin, CreateView):
 class ReportUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Report
     fields = ["headline", "content"]
+    template_name_suffix = "_update_form"
 
     #link the report to the request user
     def form_valid(self, form):
