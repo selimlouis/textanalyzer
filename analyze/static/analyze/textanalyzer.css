@@ -68,6 +68,11 @@ main {
     overflow: hidden;
 
     border-top: 6px solid rgb(53, 145, 87);
+
+    position: relative;
+
+    padding-bottom: 6em;
+
     }
 
     
@@ -83,6 +88,7 @@ main {
 
     font-family: 'Roboto', sans-serif;
     font-size: medium;
+    
 }
 
 .inputbutton {
@@ -99,11 +105,13 @@ main {
     cursor: pointer;
     width: 8em;
 
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    
+
 }
 
-#b1 {
-    margin-top: 1em;
-}
 
 .inputbutton:hover {
     background-color: rgb(53, 145, 87);
@@ -120,6 +128,10 @@ main {
     color: rgba(251, 254, 249, 1);
 
     background-color: rgba(48, 48, 48, 1);
+
+    position: relative;
+
+    padding-bottom: 6em;
 }
 
 
