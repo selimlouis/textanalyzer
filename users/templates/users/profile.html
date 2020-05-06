@@ -1,5 +1,7 @@
 {% extends 'analyze/base.html' %}
 {% load crispy_forms_tags %}
+
+
 {% block content %}
     <div class="form-box">
         <div class="media">
@@ -7,12 +9,12 @@
             <div class="media-body">
                 <h2 class="account-heading">{{ user.username }}</h2>
                 <p class="text-secondary">{{ user.email }}</p>
-            
+                <button onclick="myFunction()" class="btn btn-outline-primary">Edit</button>
             </div>
         </div>
     </div>
 
-    <div class="form-box">
+    <div class="form-box" id="updatebox" style="display: none">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
@@ -44,8 +46,25 @@
 
     <a href="{%url 'report-create'%}" class="btn btn-primary mb-4">Create new Report</a>
     </div>
+
+
+    
+
     
 {% endblock content %}
+{% block scripts %}
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("updatebox");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+{% endblock scripts %}
 
     
     
