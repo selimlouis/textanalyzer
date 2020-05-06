@@ -1,7 +1,7 @@
 {% extends 'analyze/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="content-section">
+    <div class="form-box">
         <div class="media">
             <img src="{{ user.profile.image.url }}" alt="" class="rounded-circle account-img">
             <div class="media-body">
@@ -12,6 +12,7 @@
         </div>
     </div>
 
+    <div class="form-box">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
@@ -23,7 +24,10 @@
             <button type="submit" class="btn btn-primary">Update</button>
         </div>
     </form>
+    </div>
+    
 
+    <div class="form-box usercontent">
     {% for report in reports %}
         
         <article class="media content-section">
@@ -39,6 +43,8 @@
     {% endfor %}
 
     <a href="{%url 'report-create'%}" class="btn btn-primary mb-4">Create new Report</a>
+    </div>
+    
 {% endblock content %}
 
     

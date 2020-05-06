@@ -5,7 +5,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <form method="POST" action="">
+    <div class="form-box">
+        <form method="POST" action="">
         {% csrf_token %}
         <fieldset>
             <legend>Join Today</legend>
@@ -19,4 +20,6 @@
         <small>Already have an account?
         <a href="{% url 'login' %}"> Sign In</a></small>
     </div>
+    </div>
+
 {% endblock content %}

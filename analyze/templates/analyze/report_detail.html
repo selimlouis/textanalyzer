@@ -1,6 +1,7 @@
 {% extends 'analyze/base.html' %}
 
 {% block content %}
+    <div class="form-box usercontent">
     <article class="media content-section">
         <div class="media-body">
             <h2>{{object.headline}}</h2>
@@ -13,8 +14,10 @@
     </article>
 
     {% if object.author == user %}
-    <a href="{%url 'report-update' object.id%} " class="btn btn-outline-info mb-4">Edit</a>
+    <a href="{%url 'report-update' object.id%} " class="btn btn-primary mb-4">Edit</a>
     <a href="{%url 'report-delete' object.id%} " class="btn btn-outline-danger mb-4">Delete</a>
     {% endif %}
+    </div>
+    
     
 {% endblock content %}

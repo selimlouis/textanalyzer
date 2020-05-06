@@ -1,6 +1,7 @@
 {% extends 'analyze/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+    <div class="form-box usercontent">
     <form method="POST" action="">
         {% csrf_token %}
         <fieldset>
@@ -9,7 +10,10 @@
         </fieldset>
         <div>
             <button type="submit" class="btn btn-primary">Post</button>
+            <a href=" {% url 'profile' %}" class="btn btn-outline-secondary">Cancel</a>
         </div>
     </form>
+    </div>
+    
     
 {% endblock content %}
