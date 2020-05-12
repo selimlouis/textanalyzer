@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{%static 'analyze/textanalyzer.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script type="text/javascript" src="{%static 'analyze/main.js'%}"></script>
@@ -17,25 +18,31 @@
 </head>
 <body>
     <header>
+        
         <nav>
-            <ul>
-                <li><a href="{% url 'index' %}">Text Analyzer</a></li>
+            <div class="topnav" id="myTopnav">
+                <a href="{% url 'index' %}">Text Analyzer</a>
                 {% if user.is_authenticated %}
 
-                    <li style="float: right;"><a href="{% url 'logout' %}">Log out</a></li>
-                    <li style="float: right;"><a href="{% url 'profile' %}">Profile</a></li>
+                    <a href="{% url 'logout' %}">Log out</a>
+                    <a href="{% url 'profile' %}">Profile</a>
 
                 {% else %}
-                    <li style="float: right;"><a href="{% url 'login' %}">Log in</a></li>
-                    <li style="float: right;"><a href="{% url 'register' %}">Sign up</a></li>
+                    <a href="{% url 'login' %}">Log in</a>
+                    <a href="{% url 'register' %}">Sign up</a>
                 {% endif %}
                 
                 
-                <li style="float: right;"><a href="{% url 'index' %}">Info</a></li>
+                <a href="{% url 'index' %}">Info</a>
                 
-            </ul>
-            
-        </nav>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>    
+        
+           
+          
     </header>
 
     
