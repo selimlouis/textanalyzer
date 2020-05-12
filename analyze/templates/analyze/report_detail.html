@@ -1,6 +1,8 @@
 {% extends 'analyze/base.html' %}
 
 {% block content %}
+
+<main>
     <div class="form-box usercontent">
     <article class="media content-section">
         <div class="media-body">
@@ -9,7 +11,7 @@
                 <a class="mr-2" href="{% url 'profile' %}">{{ object.author }}</a>
                 <small class="text-muted">{{ object.date_posted|date:"d F, Y" }}</small>
             </div>
-            <p class="article-content">{{object.content}}</p>
+            <p id="content" class="article-content">{{object.content}}</p>
         </div>
     </article>
 
@@ -18,6 +20,32 @@
     <a href="{%url 'report-delete' object.id%} " class="btn btn-outline-danger mb-4">Delete</a>
     {% endif %}
     </div>
+
+    <div class="report form-box">
+            <h3>Report</h3>
+
+            <h4>Wordcount:</h4>
+            <p id="p1" style="color: lightgreen"></p>
+
+            <h4>Word Frequency</h4>
+            <canvas id="myChart"></canvas>
+
+            <h4>Zipf Comparison</h4>
+            <canvas id="myComparison"></canvas>
+
+    </div>
+
+</main>
+
     
     
 {% endblock content %}
+
+
+{% block scripts %}
+<script>
+    window.onload = function() {
+        analyzeText(document.getElementById('content').innerHTML);
+    };
+</script>
+{% endblock scripts %}

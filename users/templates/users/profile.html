@@ -39,7 +39,7 @@
                 <div class="article-metadata">
                     <small class="text-muted">{{ report.date_posted|date:"d F, Y" }}</small>
                 </div>
-                <p class="article-content">{{report.content}}</p>
+                <p class="article-content">{{report.content|slice:":300"|add:"..."}}</p>
             </div>
         </article>
     {% endfor %}

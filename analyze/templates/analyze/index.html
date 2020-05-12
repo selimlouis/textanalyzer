@@ -1,12 +1,13 @@
 {% extends 'analyze/base.html' %}
+{% load static%}
 
 {% block content %}
-    <main>
+    <main class="margin-top">
         <div class="inputfield">
             <h3>Paste in the text:</h3>
             
             <textarea form="analyze" name="inputtext" id="input1" cols="30" rows="10"></textarea>
-            <button id="b1" class="inputbutton" onclick="analyzeText()">Analyze</button>
+            <button id="b1" class="inputbutton" onclick="analyzeText(document.getElementById('input1').value)">Analyze</button>
         </div>
 
         <div class="report">
@@ -29,6 +30,8 @@
 
 {% block scripts %}
 <script>
+
+    /*
     function getWords(text){
         var totalwords = text.split(' ');
         var words = [];
@@ -48,7 +51,7 @@
             'Feelin': 1,
             ...
             }
-        */
+        
         words.forEach(function (key) {
             if (wordsMap.hasOwnProperty(key.toLowerCase())) {
             wordsMap[key.toLowerCase()]++;
@@ -159,6 +162,7 @@
 
 
     }
+    */
 
     var input = document.getElementById("input1");
 

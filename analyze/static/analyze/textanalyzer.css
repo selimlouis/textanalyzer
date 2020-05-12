@@ -46,13 +46,18 @@ li > a:hover {
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 3em;
     /*margin: 1.5em;*/
     
 
     margin: 2em;
 
+
+}
+
+.margin-top {
+    margin-top: 8vh;
 }
 
 
@@ -189,5 +194,10 @@ body{
 
 .usercontent {
     border-top: 6px solid rgba(0, 123, 255, 1);
+}
+
+.usercontent p {
+    max-height: 600px;
+    overflow: auto;
 }
 
