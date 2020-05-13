@@ -82,7 +82,7 @@ function analyzeText(text){
     var wordcount = words.length - 1;
     var wordsMap = getCountedWords(words);
     var finalWordsArray = sortByCount(wordsMap);
-    var sortedMap = getSortedMap(finalWordsArray.slice(0,10));
+    var sortedMap = getSortedMap(finalWordsArray.slice(0,30));
 
     document.getElementById("p1").innerHTML = wordcount;
 
@@ -110,7 +110,7 @@ function analyzeText(text){
             labels: Object.keys(sortedMap),
             datasets: [{
                 label: 'Perfect Zipf',
-                data: getPerfectZipf(10),
+                data: getPerfectZipf(30),
                 borderColor: "lightblue",
                 fill: false
             },{
