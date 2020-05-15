@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #SECRET_KEY = 'h6n1t%_3+9a69n=(9d5^e-n47ozg*5ng0hz-07mfl3@6j!k2u@'
 SECRET_KEY = os.environ.get("TEXTANALYZER_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("TEXTANALYZER_DEBUG")
+DEBUG = (os.environ.get("TEXTANALYZER_DEBUG") == 'True')
 
 ALLOWED_HOSTS = ['mytextanalyzer.herokuapp.com']
 
