@@ -11,6 +11,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name = "index"),
+    path('info/', views.info, name="info"),
     path('report/<int:pk>/', ReportDetailView.as_view(), name="report-detail"),
     path('report/new/', ReportCreateView.as_view(), name="report-create"),
     path('report/<int:pk>/update/', ReportUpdateView.as_view(), name="report-update"),

@@ -229,3 +229,15 @@ body{
     overflow: auto;
 }
 
+.info-box{
+    text-align: center;
+}
+
+.info-box p {
+    margin-top: 3em;
+}
+
+.contacticon {
+
+    margin: 1em;
+}

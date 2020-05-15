@@ -14,6 +14,10 @@ def index(request):
     context = {}
     return HttpResponse(template.render(context,request))
 
+def info(request):
+    template = loader.get_template('analyze/info.html')
+    context = {}
+    return HttpResponse(template.render(context,request))
 
 class ReportDetailView(DetailView):
     model = Report
