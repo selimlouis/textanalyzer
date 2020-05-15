@@ -72,9 +72,11 @@ body a:hover {
 
 
 
+
+
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 3em;
     /*margin: 1.5em;*/
     
@@ -82,6 +84,12 @@ main {
     margin: 2em;
 
 
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 }
 
 .margin-top {
@@ -273,6 +281,5 @@ body{
 
     main {margin: 0}
 
-    .container {margin: 0}
-    
+    .content {margin:0}
 }
