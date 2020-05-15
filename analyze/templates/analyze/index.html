@@ -29,19 +29,22 @@
 {% endblock content %}
 
 {% block scripts %}
+
 <script>
 
+    
     var input = document.getElementById("input1");
 
     input.addEventListener('keyup', function(e){
         sessionStorage.setItem("text", document.getElementById("input1").value);
     });
     
-
+    
 
 
     
 </script>
+
 
 {% endblock scripts %}
     
