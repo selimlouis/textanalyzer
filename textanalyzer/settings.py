@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'h6n1t%_3+9a69n=(9d5^e-n47ozg*5ng0hz-07mfl3@6j!k2u@'
-
+#SECRET_KEY = 'h6n1t%_3+9a69n=(9d5^e-n47ozg*5ng0hz-07mfl3@6j!k2u@'
+SECRET_KEY = os.environ.get("TEXTANALYZER_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("TEXTANALYZER_DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mytextanalyzer.herokuapp.com']
 
 
 # Application definition
