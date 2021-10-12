@@ -36,7 +36,7 @@ mccabe==0.6.1
 nltk==3.4.5
 numpy==1.18.1
 olefile==0.46
-opencv-python==4.1.2.30
+opencv-python==4.2.0.32
 opensimplex==0.2
 pandas==1.0.3
 parsel==1.5.2
